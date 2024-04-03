@@ -146,7 +146,7 @@ class Graph {
 }
 
 
-const graph = new Graph([3, 3], [4, 3])
+const graph = new Graph([0, 0], [3, 3])
 
 
 console.log(graph.levelOrder(graph.node))
@@ -165,20 +165,120 @@ function Get ([a, b]) {
 console.log(Get([2, 4]))
 
 
-function shortestPath ([c, d]) {
+// function shortestPath ([c, d]) {
 
-    for (let i = 0; i < levelOrder(graph.node).length; i++) {
-        for (let e = 0; e < levelOrder(graph.node)[i].length; e++) {
-            if (c === levelOrder(graph.node)[i][0] && d === levelOrder(graph.node)[i][1]) {
-                return i
-            }
+//     for (let i = 0; i < levelOrder(graph.node).length; i++) {
+//         for (let e = 0; e < levelOrder(graph.node)[i].length; e++) {
+//             if (c === levelOrder(graph.node)[i][0] && d === levelOrder(graph.node)[i][1]) {
+//                 return i
+//             }
 
-            return i
-        }  
-    }
+//             return i
+//         }  
+//     }
 
     
 
-}
+// }
 
-console.log(graph.shortestPath([4, 3]))
+console.log(graph.shortestPath([3, 3]))
+
+
+
+
+// function getShortestPath(current) {
+
+//     let path = []
+
+//     let i = 0
+
+//     getPosition(current)
+
+//     function getPosition(current) {
+
+//         if (current == null) return 
+
+//         if (current.one != null) {
+//             return current.position
+//         }
+
+//         if (current.two != null) {
+//             return current.position
+//         }
+
+//         if (current.tree != null) {
+//             return current.position
+//         }
+
+//         if (current.four != null) {
+//             return current.position
+//         }
+
+//         if (current.five != null) {
+//             return current.position
+//         }
+
+//         if (current.six != null) {
+//             return current.position
+//         }
+
+//         if (current.seven != null) {
+//             return current.position
+//         }
+
+//         if (current.eight != null) {
+//             return current.position
+//         }
+
+
+//         // remove the return
+
+
+
+
+
+
+
+
+
+//         path[i] = getPosition(current.one)
+//         path[i] = getPosition(current.two)
+//         path[i] = getPosition(current.tree)
+//         path[i] = getPosition(current.four)
+//         path[i] = getPosition(current.five)
+//         path[i] = getPosition(current.six)
+//         path[i] = getPosition(current.seven)
+//         path[i] = getPosition(current.eight)
+//     }
+
+
+    
+
+
+    // for (let i = 0; i < graph.shortestPath ([c, d]); i++) {
+
+    //     path[i] = getPosition(current.one)
+    //     path[i] = getPosition(current.two)
+    //     path[i] = getPosition(current.tree)
+    //     path[i] = getPosition(current.four)
+    //     path[i] = getPosition(current.five)
+    //     path[i] = getPosition(current.six)
+    //     path[i] = getPosition(current.seven)
+    //     path[i] = getPosition(current.eight)
+
+    //     console.log(path[i])
+    // }
+
+
+//}
+
+
+// console.log(getShortestPath(graph.node, [3, 3]))
+
+
+Object.keys(graph.node).forEach(function(key) {
+    console.log(graph.node[key])
+})
+
+
+// this is bullshit. even if i find a way to get every position of the path i pass trough the function, how does it decide which way to go when there more then one next value to explore. I think  went with the wrong method from the beginning
